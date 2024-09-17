@@ -1,0 +1,59 @@
+/* Основные стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Плавный градиент для фона */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер с основным содержимым */
+.main-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2.5em;
+    color: #0072ff;
+    margin-bottom: 30px;
+}
+
+/* Блок с ссылками */
+.links {
+    margin-top: 20px;
+}
+
+/* Стиль для кнопок */
+.link-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px;
+    background-color: #0072ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект наведения */
+.link-button:hover {
+    background-color: #0056b3; /* Более тёмный оттенок синего при наведении */
+}
+
+/* Эффект нажатия */
+.link-button:active {
+    transform: scale(0.98); /* Легкая трансформация при нажатии */
+}

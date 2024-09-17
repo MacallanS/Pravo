@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифр Цезаря</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Шифр Цезаря</h1>
+        <div class="form-group">
+            <label for="inputText">Введите текст:</label>
+            <input type="text" id="inputText" placeholder="Введите текст здесь...">
+        </div>
+        <div class="form-group">
+            <label for="key">Ключ (сдвиг):</label>
+            <input type="number" id="key" placeholder="Ключ" min="1" max="32" value="8">
+        </div>
+        <div class="form-group">
+            <button onclick="encryptText()">Зашифровать</button>
+            <button onclick="decryptText()">Расшифровать</button>
+        </div>
+        <div class="result">
+            <p id="outputText">Результат...</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

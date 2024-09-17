@@ -1,5 +1,5 @@
+// Функция для шифрования и расшифрования с использованием шифра Цезаря
 function caesarCipher(text, shift) {
-    // Расширенный алфавит, включая 'ъ' и 'ь'
     const alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюя';
     const alphabetUpper = alphabet.toUpperCase();
     const shiftedText = [];
@@ -21,6 +21,7 @@ function caesarCipher(text, shift) {
     return shiftedText.join('');
 }
 
+// Функция для шифрования текста с помощью шифра Цезаря
 function encryptCaesar() {
     const inputText = document.getElementById('caesarInput').value;
     const key = parseInt(document.getElementById('caesarKey').value) || 0;
@@ -28,6 +29,7 @@ function encryptCaesar() {
     document.getElementById('caesarOutput').textContent = encryptedText;
 }
 
+// Функция для расшифрования текста с помощью шифра Цезаря
 function decryptCaesar() {
     const inputText = document.getElementById('caesarInput').value;
     const key = parseInt(document.getElementById('caesarKey').value) || 0;
@@ -35,7 +37,7 @@ function decryptCaesar() {
     document.getElementById('caesarOutput').textContent = decryptedText;
 }
 
-
+// Функция для перестановки текста по ключу
 function transposeText(text, key) {
     const keyLength = key.length;
     const textLength = text.length;
@@ -70,6 +72,7 @@ function transposeText(text, key) {
     return result;
 }
 
+// Функция для расшифрования текста по ключу
 function reverseTransposeText(text, key) {
     const keyLength = key.length;
     const textLength = text.length;
@@ -106,6 +109,7 @@ function reverseTransposeText(text, key) {
     return result;
 }
 
+// Функция для применения метода перестановки
 function applyTransposition() {
     const inputText = document.getElementById('transpositionInput').value;
     const key = document.getElementById('transpositionKey').value;
@@ -113,11 +117,10 @@ function applyTransposition() {
     document.getElementById('transpositionOutput').textContent = transposedText;
 }
 
+// Функция для обратной перестановки текста
 function reverseTransposition() {
     const inputText = document.getElementById('transpositionInput').value;
     const key = document.getElementById('transpositionKey').value;
     const reversedText = reverseTransposeText(inputText, key);
     document.getElementById('transpositionOutput').textContent = reversedText;
 }
-
-

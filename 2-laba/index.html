@@ -3,28 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шифр Цезаря</title>
+    <title>Шифр Цезаря и Метод Перестановки</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Шифр Цезаря</h1>
-        <div class="form-group">
-            <label for="inputText">Введите текст:</label>
-            <input type="text" id="inputText" placeholder="Введите текст здесь...">
+        <!-- Шифр Цезаря -->
+        <div class="card">
+            <h1>Шифрование текста</h1>
+            <section>
+                <h2>Шифр Цезаря</h2>
+                <div class="form-group">
+                    <label for="caesarInput">Введите текст для шифрования:</label>
+                    <textarea id="caesarInput" rows="4" placeholder="Введите текст здесь..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="caesarKey">Ключ (сдвиг):</label>
+                    <input type="number" id="caesarKey" placeholder="Ключ" min="1" max="32" value="8">
+                </div>
+                <div class="form-group">
+                    <button onclick="encryptCaesar()">Зашифровать</button>
+                    <button onclick="decryptCaesar()">Расшифровать</button>
+                </div>
+                <div class="result">
+                    <textarea id="caesarOutput" rows="4" readonly>Результат...</textarea>
+                </div>
+            </section>
         </div>
-        <div class="form-group">
-            <label for="key">Ключ (сдвиг):</label>
-            <input type="number" id="key" placeholder="Ключ" min="1" max="32" value="8">
-        </div>
-        <div class="form-group">
-            <button onclick="encryptText()">Зашифровать</button>
-            <button onclick="decryptText()">Расшифровать</button>
-        </div>
-        <div class="result">
-            <p id="outputText">Результат...</p>
+
+        <!-- Метод перестановки -->
+        <div class="card">
+            <h1>Шифрование текста</h1>
+            <section>
+                <h2>Метод Перестановки</h2>
+                <div class="form-group">
+                    <label for="transpositionInput">Введите текст для перестановки:</label>
+                    <textarea id="transpositionInput" rows="4" placeholder="Введите текст здесь..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="transpositionKey">Ключ (слово):</label>
+                    <input type="text" id="transpositionKey" placeholder="Ключ" value="СТОЛИК">
+                </div>
+                <div class="form-group">
+                    <button onclick="applyTransposition()">Применить перестановку</button>
+                </div>
+                <div class="result">
+                    <textarea id="transpositionOutput" rows="4" readonly>Результат...</textarea>
+                </div>
+            </section>
         </div>
     </div>
-    <script src="./script.js"></script>
 </body>
+<script src="./script.js"></script>
 </html>
